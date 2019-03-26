@@ -1,4 +1,3 @@
-//
 //  AppDelegate.swift
 //  timerApp
 //
@@ -88,6 +87,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
+
+let appDel = UIApplication.shared.delegate as! AppDelegate
+let context = appDel.persistentContainer.viewContext 
+
+
+
+
+
 

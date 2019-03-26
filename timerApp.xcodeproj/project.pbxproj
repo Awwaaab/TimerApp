@@ -13,6 +13,8 @@
 		BB3BBDFA20A09F0F00399167 /* timerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB3BBDF820A09F0F00399167 /* timerApp.xcdatamodeld */; };
 		BB3BBDFC20A09F0F00399167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB3BBDFB20A09F0F00399167 /* Assets.xcassets */; };
 		BB3BBDFF20A09F0F00399167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB3BBDFD20A09F0F00399167 /* LaunchScreen.storyboard */; };
+		BBC65B5E20A0DBA70024BFED /* mycustomview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC65B5D20A0DBA70024BFED /* mycustomview.swift */; };
+		BBC65B6020A0F1E20024BFED /* mycustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC65B5F20A0F1E20024BFED /* mycustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BB3BBDFB20A09F0F00399167 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB3BBDFE20A09F0F00399167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB3BBE0020A09F0F00399167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBC65B5D20A0DBA70024BFED /* mycustomview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mycustomview.swift; sourceTree = "<group>"; };
+		BBC65B5F20A0F1E20024BFED /* mycustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mycustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				BB3BBDF120A09F0F00399167 /* AppDelegate.swift */,
 				BB3BBDF320A09F0F00399167 /* ViewController.swift */,
+				BBC65B5D20A0DBA70024BFED /* mycustomview.swift */,
+				BBC65B5F20A0F1E20024BFED /* mycustomButton.swift */,
 				BB3BBDF520A09F0F00399167 /* Main.storyboard */,
 				BB3BBDFB20A09F0F00399167 /* Assets.xcassets */,
 				BB3BBDFD20A09F0F00399167 /* LaunchScreen.storyboard */,
@@ -140,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB3BBDF420A09F0F00399167 /* ViewController.swift in Sources */,
+				BBC65B5E20A0DBA70024BFED /* mycustomview.swift in Sources */,
 				BB3BBDFA20A09F0F00399167 /* timerApp.xcdatamodeld in Sources */,
+				BBC65B6020A0F1E20024BFED /* mycustomButton.swift in Sources */,
 				BB3BBDF220A09F0F00399167 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +288,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = timerApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Awab-Aly.timerApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -294,6 +303,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = timerApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Awab-Aly.timerApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,24 +1,242 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kefa.ttf">
+            <string>Kefa-Regular</string>
+        </array>
+        <array key="Verdana.ttf">
+            <string>Verdana</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="timerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFR-gV-Ll7" userLabel="bigview" customClass="mycustomview" customModule="timerApp" customModuleProvider="target">
+                                <rect key="frame" x="0.5" y="0.0" width="374" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4o-YX-JsR">
+                                        <rect key="frame" x="123" y="61" width="128" height="47"/>
+                                        <color key="backgroundColor" red="0.06269828680203049" green="0.05590887105979226" blue="0.0581522714241655" alpha="0.150390625" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="55" constant="47" id="qdH-Ye-ac2"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" priority="33" constant="128" id="v7Y-LS-hW1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="40"/>
+                                        <color key="textColor" red="1" green="0.18701171875" blue="0.3049721711601307" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umc-ue-U3K" customClass="mycustomButton" customModule="timerApp" customModuleProvider="target">
+                                        <rect key="frame" x="112" y="417" width="151" height="73"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.1131207191780822" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="151" id="QED-ol-S3P"/>
+                                            <constraint firstAttribute="height" constant="73" id="RbF-PW-VCR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="50"/>
+                                        <state key="normal" title=" GO ! ">
+                                            <color key="titleColor" red="0.60948350694444442" green="0.0" blue="0.92580837673611116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWIDTH">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRAdios">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderCOlOR">
+                                                <color key="value" red="0.82277353466153291" green="0.0015343241944982579" blue="0.99692655456852797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPk-fN-wah"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1h-qG-fsb" userLabel="stopwatchview" customClass="mycustomview" customModule="timerApp" customModuleProvider="target">
+                                        <rect key="frame" x="417" y="280" width="240" height="307"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WW0-X1-wny" customClass="mycustomButton" customModule="timerApp" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="228" width="68" height="53"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.090378852740000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="53" id="LDs-kH-HGp"/>
+                                                    <constraint firstAttribute="width" constant="68" id="VyK-WF-eh2"/>
+                                                </constraints>
+                                                <state key="normal" title="Puse">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWIDTH">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRAdios">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderCOlOR">
+                                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="puseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Qu-zB-LCx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2x-sR-SWB" customClass="mycustomButton" customModule="timerApp" customModuleProvider="target">
+                                                <rect key="frame" x="142" y="228" width="68" height="53"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.090378852739726026" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="68" id="EiQ-Fb-l7X"/>
+                                                    <constraint firstAttribute="height" constant="53" id="nYm-pv-Tim"/>
+                                                </constraints>
+                                                <state key="normal" title="Stop">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWIDTH">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRAdios">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderCOlOR">
+                                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zOC-0D-9Oy"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVD-fc-AyF">
+                                                <rect key="frame" x="30" y="34" width="180" height="47"/>
+                                                <color key="backgroundColor" red="0.062698286800000003" green="0.055908871059999997" blue="0.058152271419999998" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="180" id="4FM-h4-thz"/>
+                                                    <constraint firstAttribute="height" constant="47" id="Ktm-cW-2rg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="lVD-fc-AyF" firstAttribute="top" secondItem="C1h-qG-fsb" secondAttribute="top" constant="34" id="Gho-x8-zq9"/>
+                                            <constraint firstItem="WW0-X1-wny" firstAttribute="leading" secondItem="C1h-qG-fsb" secondAttribute="leading" constant="30" id="NWm-UD-LnJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="lVD-fc-AyF" secondAttribute="trailing" constant="30" id="UHz-bU-qoH"/>
+                                            <constraint firstAttribute="height" constant="307" id="WeS-sF-zRq"/>
+                                            <constraint firstAttribute="bottom" secondItem="WW0-X1-wny" secondAttribute="bottom" constant="26" id="d43-hX-Lc7"/>
+                                            <constraint firstAttribute="bottom" secondItem="F2x-sR-SWB" secondAttribute="bottom" constant="26" id="fzq-JK-6EA"/>
+                                            <constraint firstAttribute="trailing" secondItem="F2x-sR-SWB" secondAttribute="trailing" constant="30" id="k4d-kw-7ms"/>
+                                            <constraint firstAttribute="width" constant="240" id="pBg-Ot-f1O"/>
+                                            <constraint firstItem="lVD-fc-AyF" firstAttribute="leading" secondItem="C1h-qG-fsb" secondAttribute="leading" constant="30" id="zvL-Hz-VdD"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="FirstColoR">
+                                                <color key="value" red="0.75686274509803919" green="0.0" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="SecondColoR">
+                                                <color key="value" red="0.74509803921568629" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="conerRADius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="V4o-YX-JsR" firstAttribute="leading" secondItem="IFR-gV-Ll7" secondAttribute="leading" constant="123" id="AfL-mg-YdF"/>
+                                    <constraint firstItem="V4o-YX-JsR" firstAttribute="centerX" secondItem="IFR-gV-Ll7" secondAttribute="centerX" id="Ao1-NA-lbP"/>
+                                    <constraint firstItem="V4o-YX-JsR" firstAttribute="top" secondItem="IFR-gV-Ll7" secondAttribute="top" constant="61" id="ChI-Od-Xl9"/>
+                                    <constraint firstItem="Umc-ue-U3K" firstAttribute="centerY" secondItem="IFR-gV-Ll7" secondAttribute="centerY" constant="120" id="H9e-PF-2WR"/>
+                                    <constraint firstItem="C1h-qG-fsb" firstAttribute="centerY" secondItem="IFR-gV-Ll7" secondAttribute="centerY" constant="100" id="Jku-6R-IgX"/>
+                                    <constraint firstAttribute="trailing" secondItem="V4o-YX-JsR" secondAttribute="trailing" constant="123" id="K7L-Sx-qRg"/>
+                                    <constraint firstItem="C1h-qG-fsb" firstAttribute="centerX" secondItem="IFR-gV-Ll7" secondAttribute="centerX" constant="350" id="XK7-BY-OcW"/>
+                                    <constraint firstItem="V4o-YX-JsR" firstAttribute="centerX" secondItem="Umc-ue-U3K" secondAttribute="centerX" id="zRC-7N-T1W"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColoR">
+                                        <color key="value" red="0.54509803921568623" green="0.0" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColoR">
+                                        <color key="value" red="0.84705882352941175" green="0.082352941176470587" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="conerRADius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgD-ae-H1o" userLabel="tableview view" customClass="mycustomview" customModule="timerApp" customModuleProvider="target">
+                                <rect key="frame" x="467.5" y="280" width="240" height="307"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hPI-Ob-evj">
+                                        <rect key="frame" x="4" y="4" width="232" height="299"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="dhJ-uO-8NL"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="ANv-fm-bVh"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8EI-BK-Tej"/>
+                                    <constraint firstAttribute="bottom" secondItem="hPI-Ob-evj" secondAttribute="bottom" constant="4" id="IS5-Yb-TjD"/>
+                                    <constraint firstAttribute="height" constant="307" id="Unt-1U-cpX"/>
+                                    <constraint firstAttribute="trailing" secondItem="hPI-Ob-evj" secondAttribute="trailing" constant="4" id="WSe-sc-KCw"/>
+                                    <constraint firstItem="hPI-Ob-evj" firstAttribute="leading" secondItem="NgD-ae-H1o" secondAttribute="leading" constant="4" id="gTb-cw-epy"/>
+                                    <constraint firstItem="hPI-Ob-evj" firstAttribute="top" secondItem="NgD-ae-H1o" secondAttribute="top" constant="4" id="qGp-KV-X8o"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColoR">
+                                        <color key="value" red="0.75686274509803919" green="0.0" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColoR">
+                                        <color key="value" red="0.74509803919999995" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="conerRADius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IFR-gV-Ll7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2jA-jW-WUC"/>
+                            <constraint firstItem="IFR-gV-Ll7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B8N-O8-duq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IFR-gV-Ll7" secondAttribute="trailing" id="Qmo-hk-eQA"/>
+                            <constraint firstItem="IFR-gV-Ll7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S6L-tW-ny0"/>
+                            <constraint firstItem="IFR-gV-Ll7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UIc-70-cWP"/>
+                            <constraint firstItem="NgD-ae-H1o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="400" id="emG-Xs-Sgy"/>
+                            <constraint firstItem="IFR-gV-Ll7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lBn-QF-11z"/>
+                            <constraint firstItem="NgD-ae-H1o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="tz4-SH-f8n"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="myTableview" destination="hPI-Ob-evj" id="e3F-fv-QAO"/>
+                        <outlet property="puseOUTlet" destination="WW0-X1-wny" id="z1x-xK-ePw"/>
+                        <outlet property="stopwatchLable" destination="lVD-fc-AyF" id="5F4-bP-LOU"/>
+                        <outlet property="stopwatchview_layout" destination="XK7-BY-OcW" id="kea-zX-pyP"/>
+                        <outlet property="tableviewLayOUT" destination="emG-Xs-Sgy" id="eAV-Di-cyS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
